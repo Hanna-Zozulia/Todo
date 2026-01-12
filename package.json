@@ -1,0 +1,16 @@
+{
+  "name": "ts-todo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "description": "Simple Kanban-style TODO board in TypeScript with localStorage.",
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "powershell -NoProfile -Command \"if (Test-Path dist) {Remove-Item -Recurse -Force dist}\"",
+    "dev": "npm run build -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  } 
+}
