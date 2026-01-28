@@ -1,4 +1,4 @@
-import type { Task, Status } from './types';
+import type { Task, Status } from './types.js';
 import { loadTasks, saveTasks, generateId } from './storage.js';
 import { renderBoard, bindDragAndDrop } from './ui.js';
 
@@ -93,3 +93,5 @@ document.addEventListener('click', (e) => {
     tasks = tasks.filter((t) => t.id !== id);
     sync();
 });
+
+export { sync, moveTask, tasks };

@@ -79,4 +79,5 @@ document.addEventListener('click', (e) => {
     tasks = tasks.filter((t) => t.id !== id);
     sync();
 });
+export { sync, moveTask, tasks };
 //# sourceMappingURL=main.js.map

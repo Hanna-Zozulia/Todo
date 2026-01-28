@@ -11,7 +11,8 @@ export function loadTasks() {
             typeof t.id === 'string' &&
             typeof t.title === 'string' &&
             typeof t.createdAt === 'string' &&
-            ['todo', 'wip', 'test', 'done'].includes(t.status));
+            ['todo', 'wip', 'test', 'done'].includes(t.status) &&
+            ['normal', 'urgent'].includes(t.priority));
     }
     catch (_a) {
         return [];

@@ -8,9 +8,15 @@
     "build": "tsc -p .",
     "clean": "powershell -NoProfile -Command \"if (Test-Path dist) {Remove-Item -Recurse -Force dist}\"",
     "dev": "npm run build -- --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "ts-jest": "^29.4.6",
     "typescript": "^5.9.3"
-  } 
+  },
+  "dependencies": {
+    "jest": "^30.2.0"
+  }
 }

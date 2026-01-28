@@ -14,7 +14,8 @@ export function loadTasks(): Task[] {
         typeof (t as any).id === 'string' &&
         typeof (t as any).title === 'string' &&
         typeof (t as any).createdAt === 'string' &&
-        (['todo', 'wip', 'test', 'done'] as const).includes((t as any).status)
+        (['todo', 'wip', 'test', 'done'] as const).includes((t as any).status) &&
+        (['normal', 'urgent'] as const).includes((t as any).priority)
         ) as Task[];
     } catch {
         return [];
